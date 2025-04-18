@@ -1,20 +1,17 @@
 :root {
-    --header-color: #57af75;
-    --card-roundess: 0.5rem;
-    --card-gap: 1rem;
-    --card-text: #224422;
-    --card-color: #dddedd;
-    --card-username: #888;
-    --link-color: ;
-    --link-hover-color: ;
-    background-color: #445444;
+  --header-color: #57af75;
+  --card-roundess: 0.5rem;
+  --card-text: #224422;
+  --card-color: #dddedd;
+  --card-username: #888;
+  background-color: #445444;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --card-text: rgba(255, 255, 255, 0.87);
+    --card-color: #393d39;
+    --card-username: #aaa;
+    background-color: #1e251e;
   }
-  
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --card-text: rgba(255, 255, 255, 0.87);
-      --card-color: #393d39;
-      --card-username: #aaa;
-      background-color: #1e251e;
-    }
-  }
+}
