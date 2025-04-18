@@ -177,14 +177,4 @@ splashClose.addEventListener('click', () => {
   // Completely delete the splash screen so the opacity effects can clear
   splash.parentElement?.removeChild(splash);
   (document.activeElement as HTMLElement | undefined)?.blur();
-});
-
-window.addEventListener('resize', () => {
-  const newText = `body {
-  --card-gap: ${import.meta.env.VITE_SITE_GAP}px;
-  --max-col-width: ${import.meta.env.VITE_SITE_MAX_COL_WIDTH}px;
-  --height-overload: ${window.innerHeight}px;
-}`;
-  console.log(newText);
-  envStyles.replaceSync(newText);
 })

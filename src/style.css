@@ -24,7 +24,7 @@ body {
   min-width: 360px;
   min-height: 400px;
   width: 100vw;
-  height: var(--height-overload, 100vh);
+  height: 100vh;
   overflow: hidden;
 }
 
@@ -96,7 +96,7 @@ header {
     justify-content: center;
   }
   button {
-    padding: 0.5rem 1rem;
+    padding: 0.5rem;
     font-size: 1.3rem;
     background-color: var(--button-color);
     transition: background-color ease-in 100ms;
