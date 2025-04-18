@@ -6,6 +6,9 @@
 
   color-scheme: light dark;
 
+  background-size: cover;
+  background-repeat: no-repeat;
+
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -32,8 +35,17 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 2rem;
   background-color: var(--header-color);
+  transition: opacity ease-in 150ms;
+  h1 {
+    font-size: 2rem;
+    color: var(--header-text);
+  }
+}
+
+#splash ~ header {
+  transition: none;
+  opacity: 0;
 }
 
 #board {
@@ -51,9 +63,51 @@ header {
   justify-content: center;
   overflow-x: hidden;
   overflow-y: auto;
+  opacity: 1;
+  transition: opacity ease-in 150ms;
 }
-#splash + #board {
+#splash ~ #board {
+  transition: none;
   opacity: 0;
+}
+
+#splash {
+  width: 95vw;
+  max-width: var(--max-col-width, 500px);
+  min-height: fit-content;
+  height: 350px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin:auto !important;
+  padding: 1rem;
+  border: none;
+  box-shadow: 0 3px 15px #0003, 0 3px 15px #0004;
+
+  h2 {
+    font-size: 2.5rem;
+  }
+  .splash-content {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  button {
+    padding: 0.5rem;
+    font-size: 1.3rem;
+    background-color: var(--button-color);
+    transition: background-color ease-in 100ms;
+    color: var(--button-text);
+    border: none;
+    border-radius: var(--card-roundness);
+    cursor: pointer;
+
+    &:hover {
+      background-color: var(--button-hover);
+    }
+  }
 }
 
 .column {
@@ -64,24 +118,18 @@ header {
   margin-bottom: 4rem;
 }
 
-.card {
+.card, #splash {
   background-color: var(--card-color, white);
   color: var(--card-text, black);
   border-radius: var(--card-roundness, 0.5rem);
+}
+
+.card {
   padding: 0;
   margin: 0;
   box-shadow: 0 3px 6px #0003, 0 3px 6px #0004;
 }
 
-.card.col-1 {
-  grid-column: 1;
-}
-.card.col-2 {
-  grid-column: 2;
-}
-.card.col-3 {
-  grid-column: 3;
-}
 .card-text {
   font-size: 1.1rem;
   & > h1 {

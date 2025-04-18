@@ -10,6 +10,10 @@ This is meant to be a template you can fork and use yourself. Simple configurati
 
 `VITE_SITE_BANNER` is the title that goes on the banner at the top of the page
 
+`VITE_SITE_SPLASH_TEXT` is the text that appears on the splash screen
+
+`VITE_SITE_SPLASH_CONTINUE` is the text that appears on the button for moving past the splash screen
+
 `VITE_SITE_GAP` is the amount of px between each card. Normally, this is a style, but it gets used in the masonry calculations.
 
 `VITE_SITE_MAX_COL_COUNT` is the maximum amount of columns the layout can distribute into
@@ -22,17 +26,25 @@ This is meant to be a template you can fork and use yourself. Simple configurati
 
 `--header-color` is the background color of the header
 
+`--header-text` is the color of the text for the header
+
+`--button-color` is the base color for buttons
+
+`--button-hover` is the button color while your mouse is over it
+
+`--button-text` is the color of the text on the button
+
 `--card-roundness` is how large the rounded corners on the card are
 
-`--card-text` is the font color for everything. Might split it out into `--card-text` and `--header-text`
+`--card-text` is the font color for everything else that isn't otherwise specified by the above text colors
 
 `--card-color` is the background color of each card
 
 `--card-username` is the color of the username text on the bottom right corner of the card
 
-`background-color` is for the entire site
+`background` is for the entire site. This can stay a color or be an image using `URL('<image url>')`. Image may take further styling. Images are default sized so that they cover the entire back of the page with no repeats, so the entire image may not be visible
 
-Theme variables default in light mode, and get overridden for dark mode
+Theme variables default in light mode, and get overridden for dark mode (see the @media section in the same file)
 
 ## src/data.ts
 

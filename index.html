@@ -15,7 +15,13 @@
     </style>
   </head>
   <body>
-    <header id="banner">%VITE_SITE_BANNER%</header>
+    <dialog id="splash">
+      <div class="splash-content">
+        <h2>%VITE_SITE_SPLASH_TEXT%</h2>
+      </div>
+      <button id="splash-close">%VITE_SITE_SPLASH_CONTINUE%</button>
+    </dialog>
+    <header id="banner"><h1>%VITE_SITE_BANNER%</h1></header>
     <div id="board"></div>
     <script type="module" src="/src/main.ts"></script>
   </body>

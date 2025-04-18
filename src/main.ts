@@ -5,6 +5,7 @@ import { gulp, Card } from "./data.ts";
 let dataComplete = false;
 
 const board = document.getElementById("board")!;
+const splash = document.getElementById("splash") as HTMLDialogElement;
 let cards: Card[] = [];
 const columnHeights: number[] = [];
 
@@ -159,3 +160,5 @@ gulp(cards).then(finished=>{
   processNext()
 });
 
+splash.showModal();
+document.getElementById('splash-close')?.addEventListener('click', ()=> splash.parentElement?.removeChild(splash))
