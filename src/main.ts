@@ -43,7 +43,7 @@ const processNext = async () => {
     return;
   }
   const nextIndex = columnHeights.indexOf(Math.min(...columnHeights));
-  const newCard = renderCard(lastRendered + 1, nextIndex + 1);
+  const newCard = renderCard(lastRendered + 1);
   if(changingColumns){
     return;
   }
@@ -60,11 +60,11 @@ const processNext = async () => {
   processNext();
 }
 
-const renderCard = (index: number, column: number): HTMLElement => {
+const renderCard = (index: number): HTMLElement => {
   const data = cards[index];
   const img = data.art ? html`<img src=${data.art} class="card-img" />` : "";
   const card = html`
-    <article tabindex=${index + 1 } class='card col-${column}'>
+    <article tabindex=${index + 1 } class='card'>
       ${img}
       <section class="card-content">
         <div class="card-text">${processMessage(data.message)}</div>
@@ -161,4 +161,12 @@ gulp(cards).then(finished=>{
 });
 
 splash.showModal();
-document.getElementById('splash-close')?.addEventListener('click', ()=> splash.parentElement?.removeChild(splash))
+const splashClose = document.getElementById('splash-close') as HTMLButtonElement;
+// the button will still be first in the tab order, but don't show the focus outline unless they try to tab
+splashClose.blur();
+
+splashClose.addEventListener('click', () => {
+  // Completely delete the splash screen so the opacity effects can clear
+  splash.parentElement?.removeChild(splash);
+  (document.activeElement as HTMLElement | undefined)?.blur();
+})
