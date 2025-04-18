@@ -160,6 +160,14 @@ gulp(cards).then(finished=>{
   processNext()
 });
 
+const envStyles = new CSSStyleSheet();
+envStyles.replaceSync(`body {
+  --card-gap: ${import.meta.env.VITE_SITE_GAP}px;
+  --max-col-width: ${import.meta.env.VITE_SITE_MAX_COL_WIDTH}px;
+}`);
+
+document.adoptedStyleSheets.push(envStyles);
+
 splash.showModal();
 const splashClose = document.getElementById('splash-close') as HTMLButtonElement;
 // the button will still be first in the tab order, but don't show the focus outline unless they try to tab
