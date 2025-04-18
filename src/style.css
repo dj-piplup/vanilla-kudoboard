@@ -30,7 +30,7 @@ body {
 
 header {
   flex-shrink: 0;
-  height: 4rem;
+  height: 6rem;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -38,7 +38,8 @@ header {
   background-color: var(--header-color);
   transition: opacity ease-in 150ms;
   h1 {
-    font-size: 2rem;
+    font-size: 2.5rem;
+    font-weight: 600;
     color: var(--header-text);
   }
 }
@@ -80,7 +81,7 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin:auto !important;
+  margin: auto !important;
   padding: 1rem;
   border: none;
   box-shadow: 0 3px 15px #0003, 0 3px 15px #0004;
@@ -118,7 +119,8 @@ header {
   margin-bottom: 4rem;
 }
 
-.card, #splash {
+.card,
+#splash {
   background-color: var(--card-color, white);
   color: var(--card-text, black);
   border-radius: var(--card-roundness, 0.5rem);
@@ -149,6 +151,11 @@ header {
 .card-content {
   padding: 1rem;
 }
+
+.card-content:not(img ~ .card-content) {
+  margin-top: 0.5rem;
+}
+
 .card-info {
   display: flex;
   justify-content: flex-end;
