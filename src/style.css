@@ -24,7 +24,7 @@ body {
   min-width: 360px;
   min-height: 400px;
   width: 100vw;
-  height: 100vh;
+  height: 100svh;
   overflow: hidden;
 }
 
@@ -72,9 +72,14 @@ header {
   opacity: 0;
 }
 
+#splash:not([open]) {
+  display: none;
+}
+
 #splash {
-  width: 95vw;
+  width: calc(100vw - 2rem);
   max-width: var(--max-col-width, 500px);
+  box-sizing: border-box;
   min-height: fit-content;
   height: 350px;
 
@@ -88,6 +93,7 @@ header {
 
   h2 {
     font-size: 2.5rem;
+    text-align: center;
   }
   .splash-content {
     flex-grow: 1;
@@ -96,7 +102,7 @@ header {
     justify-content: center;
   }
   button {
-    padding: 0.5rem;
+    padding: 0.5rem 1rem;
     font-size: 1.3rem;
     background-color: var(--button-color);
     transition: background-color ease-in 100ms;
@@ -116,7 +122,7 @@ header {
   display: flex;
   flex-direction: column;
   gap: var(--card-gap, 1rem);
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
 }
 
 .card,

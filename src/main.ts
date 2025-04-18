@@ -26,6 +26,11 @@ const canFetchMore = () => {
 }
 
 const processNext = async () => {
+  if(cards.length === 0){
+    // This prevents early calls from the resizer
+    // processNext is automatically called after the first gulp is complete from the Entrypoint section of this file
+    return;
+  }
   if (lastRendered > 0 && cards.length - 1 === lastRendered) {
     if(!dataComplete){
       gulp(cards).then(finished => {
@@ -177,4 +182,4 @@ splashClose.addEventListener('click', () => {
   // Completely delete the splash screen so the opacity effects can clear
   splash.parentElement?.removeChild(splash);
   (document.activeElement as HTMLElement | undefined)?.blur();
-})
+});
