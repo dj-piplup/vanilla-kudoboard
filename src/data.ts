@@ -4,7 +4,7 @@
  * @returns Promise that resolves when the data is finished fetching. True if this was the last gulp, false if not
  */
 export async function gulp(cards: Card[]): Promise<boolean> {
-    await fetch("./cards.json").then((r) => r.json()).then(json => cards.push(...json));
+    await fetch("./formdata.json").then((r) => r.json()).then(json => cards.push(...json));
     return true;
 }
 

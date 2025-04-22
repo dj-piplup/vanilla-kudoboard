@@ -1,21 +1,21 @@
 :root {
-  --header-color: #4a9964;
-  --header-text: white;
-  --button-color: #8dc4a0;
-  --button-hover: #638d72;
-  --button-text: #224422;
+  --button-color: #396abf;
+  --button-hover: #2353a5;
+  --button-text: #ffffffe0;
+  --header-color: var(--button-color);
+  --header-text: var(--button-text);
   --card-roundness: 0.5rem;
-  --card-text: #224422;
-  --card-color: #dddedd;
-  --card-username: #888;
-  background: #445444;
+  --card-text: #06182b;
+  --card-color: #ffffff;
+  --card-username: #06182b77;
+  background: #c9cbd0;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --card-text: rgba(255, 255, 255, 0.87);
-    --card-color: #393d39;
-    --card-username: #aaa;
-    background: #1e251e;
+    --card-color: #272a2e;
+    --card-username: #fff7;
+    background: #19191a;
   }
 }
