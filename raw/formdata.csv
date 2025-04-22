@@ -1,6 +1,6 @@
 2025-04-14T10:37:00-08:00,DJPiplup,"This one has a longer message, so it will probably wrap onto multiple lines",
 2025-04-14T10:37:00-08:00,DJPiplup,"This <ins>one</ins> <ins style='color:red'>has</ins> *valid* **inline** ***things***",
-2025-04-14T10:37:00-08:00,DJPiplup,"This one has `other` inline ~~things~~, like [links](https://google.com) or ![images](https://img.naplings.net/eldenring.webp)",
+2025-04-14T10:37:00-08:00,DJPiplup,"This one has `other` inline ~~things~~, like [links](https://google.com) or ![images](./images/eldenring.webp)",
 2025-04-14T10:37:00-08:00,DJPiplup,"This
 one
 is
@@ -9,7 +9,7 @@ tall",
 2025-04-14T10:37:00-08:00,DJPiplup,"# Header
 
 Other text",
-2025-04-14T10:37:00-08:00,DJPiplup,"This has an image with a non-square aspect ratio",https://img.naplings.net/eldenring.webp
+2025-04-14T10:37:00-08:00,DJPiplup,"This has an image with a non-square aspect ratio",./images/eldenring.webp
 2025-04-14T10:37:00-08:00,DJPiplup,"## Beeeeg text
 
 Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.
@@ -22,12 +22,12 @@ Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapi
 
 Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.",
 2025-04-14T10:37:00-08:00,DJPiplup,"This one has a longer message, so it will probably wrap onto multiple lines",
-2025-04-14T10:37:00-08:00,DJPiplup,"This one has an image to test how that works.",https://img.naplings.net/nimi.webp
+2025-04-14T10:37:00-08:00,DJPiplup,"This one has an image to test how that works.",./images/nimi.webp
 2025-04-14T10:37:00-08:00,DJPiplup,"# Header
 
 Other text",
 2025-04-14T10:37:00-08:00,DJPiplup,"This one has a longer message, so it will probably wrap onto multiple lines",
-2025-04-14T10:37:00-08:00,DJPiplup,"Another natural length message. Maybe a couple lines depending on width of the card.",https://img.naplings.net/nimiplush.jpg
+2025-04-14T10:37:00-08:00,DJPiplup,"Another natural length message. Maybe a couple lines depending on width of the card.",./images/nimiplush.webp
 2025-04-14T10:37:00-08:00,DJPiplup,"This one has a longer message, so it will probably wrap onto multiple lines",
 2025-04-14T10:37:00-08:00,DJPiplup,"This
 one
@@ -37,15 +37,15 @@ tall",
 2025-04-14T10:37:00-08:00,DJPiplup,"# Header
 
 Other text",
-2025-04-14T10:37:00-08:00,DJPiplup,"This has an image with a non-square aspect ratio",https://img.naplings.net/eldenring.webp
+2025-04-14T10:37:00-08:00,DJPiplup,"This has an image with a non-square aspect ratio",./images/eldenring.webp
 2025-04-14T10:37:00-08:00,DJPiplup,"This one has a longer message, so it will probably wrap onto multiple lines",
-2025-04-14T10:37:00-08:00,DJPiplup,"This one has an image to test how that works.",https://img.naplings.net/nimi.webp
+2025-04-14T10:37:00-08:00,DJPiplup,"This one has an image to test how that works.",./images/nimi.webp
 2025-04-14T10:37:00-08:00,DJPiplup,"# Header
 
 Other text",
 2025-04-14T10:37:00-08:00,DJPiplup,"This one has a longer message, so it will probably wrap onto multiple lines",
 2025-04-14T10:37:00-08:00,DJPiplup,"Another natural length message. Maybe a couple lines depending on width of the card.",
-2025-04-14T10:37:00-08:00,DJPiplup,"This one has a longer message, so it will probably wrap onto multiple lines",https://img.naplings.net/nimiplush.jpg
+2025-04-14T10:37:00-08:00,DJPiplup,"This one has a longer message, so it will probably wrap onto multiple lines",./images/nimiplush.webp
 2025-04-14T10:37:00-08:00,DJPiplup,"This
 one
 is
@@ -54,21 +54,21 @@ tall",
 2025-04-14T10:37:00-08:00,DJPiplup,"# Header
 
 Other text",
-2025-04-14T10:37:00-08:00,DJPiplup,"This has an image with a non-square aspect ratio",https://img.naplings.net/eldenring.webp
+2025-04-14T10:37:00-08:00,DJPiplup,"This has an image with a non-square aspect ratio",./images/eldenring.webp
 2025-04-14T10:37:00-08:00,DJPiplup,"This one has a longer message, so it will probably wrap onto multiple lines",
-2025-04-14T10:37:00-08:00,DJPiplup,"This one has an image to test how that works.",https://img.naplings.net/nimi.webp
+2025-04-14T10:37:00-08:00,DJPiplup,"This one has an image to test how that works.",./images/nimi.webp
 2025-04-14T10:37:00-08:00,DJPiplup,"# Header
 
 Other text",
 2025-04-14T10:37:00-08:00,DJPiplup,"This one has a longer message, so it will probably wrap onto multiple lines",
 2025-04-14T10:37:00-08:00,DJPiplup,"Another natural length message. Maybe a couple lines depending on width of the card.",
-2025-04-14T10:37:00-08:00,DJPiplup,"This one has an image to test how that works.",https://img.naplings.net/nimi.webp
+2025-04-14T10:37:00-08:00,DJPiplup,"This one has an image to test how that works.",./images/nimi.webp
 2025-04-14T10:37:00-08:00,DJPiplup,"# Header
 
 Other text",
 2025-04-14T10:37:00-08:00,DJPiplup,"This one has a longer message, so it will probably wrap onto multiple lines",
 2025-04-14T10:37:00-08:00,DJPiplup,"Another natural length message. Maybe a couple lines depending on width of the card.",
-2025-04-14T10:37:00-08:00,DJPiplup,"This one has a longer message, so it will probably wrap onto multiple lines",https://img.naplings.net/nimiplush.jpg
+2025-04-14T10:37:00-08:00,DJPiplup,"This one has a longer message, so it will probably wrap onto multiple lines",./images/nimiplush.webp
 2025-04-14T10:37:00-08:00,DJPiplup,"This
 one
 is
@@ -77,15 +77,15 @@ tall",
 2025-04-14T10:37:00-08:00,DJPiplup,"# Header
 
 Other text",
-2025-04-14T10:37:00-08:00,DJPiplup,"This has an image with a non-square aspect ratio",https://img.naplings.net/eldenring.webp
+2025-04-14T10:37:00-08:00,DJPiplup,"This has an image with a non-square aspect ratio",./images/eldenring.webp
 2025-04-14T10:37:00-08:00,DJPiplup,"This one has a longer message, so it will probably wrap onto multiple lines",
-2025-04-14T10:37:00-08:00,DJPiplup,"This one has an image to test how that works.",https://img.naplings.net/nimi.webp
+2025-04-14T10:37:00-08:00,DJPiplup,"This one has an image to test how that works.",./images/nimi.webp
 2025-04-14T10:37:00-08:00,DJPiplup,"# Header
 
 Other text",
 2025-04-14T10:37:00-08:00,DJPiplup,"This one has a longer message, so it will probably wrap onto multiple lines",
 2025-04-14T10:37:00-08:00,DJPiplup,"Another natural length message. Maybe a couple lines depending on width of the card.",
-2025-04-14T10:37:00-08:00,DJPiplup,"This one has an image to test how that works.",https://img.naplings.net/nimi.webp
+2025-04-14T10:37:00-08:00,DJPiplup,"This one has an image to test how that works.",./images/nimi.webp
 2025-04-14T10:37:00-08:00,DJPiplup,"# Header
 
 Other text",
@@ -100,9 +100,9 @@ tall",
 2025-04-14T10:37:00-08:00,DJPiplup,"# Header
 
 Other text",
-2025-04-14T10:37:00-08:00,DJPiplup,"This has an image with a non-square aspect ratio",https://img.naplings.net/eldenring.webp
+2025-04-14T10:37:00-08:00,DJPiplup,"This has an image with a non-square aspect ratio",./images/eldenring.webp
 2025-04-14T10:37:00-08:00,DJPiplup,"This one has a longer message, so it will probably wrap onto multiple lines",
-2025-04-14T10:37:00-08:00,DJPiplup,"This one has an image to test how that works.",https://img.naplings.net/nimi.webp
+2025-04-14T10:37:00-08:00,DJPiplup,"This one has an image to test how that works.",./images/nimi.webp
 2025-04-14T10:37:00-08:00,DJPiplup,"# Header
 
 Other text",
