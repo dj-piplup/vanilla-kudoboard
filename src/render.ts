@@ -6,7 +6,7 @@ const html = (strings: TemplateStringsArray, ...values: unknown[]) =>
   String.raw({ raw: strings }, ...values);
 
 /**
- * Writes N columns into a parent element and sets the height state to an appropriate amount of "0"
+ * Writes N columns into a parent element and returns the height state with an appropriate amount of "0"s
  * @param count Number of columns
  * @param parent 
  */
@@ -14,23 +14,12 @@ export function writeColumns(
   count: number,
   parent: HTMLElement
 ) {
-  const heights = new Array(count).fill(0);
   for (let i = 0; i < count; i++) {
     const col = document.createElement("section");
     col.id = `column-${i}`;
     col.classList.add("column");
     parent.appendChild(col);
   }
-  return heights;
-}
-
-/**
- * Modifies an array reference in place to new data. Aliases a 0-length splice
- * @param array The array to be mutated
- * @param newData The data to mutate the new array into
- */
-export function replace(array:unknown[], newData: unknown[]){
-    array.splice(0, array.length, ...newData);
 }
 
 /**
