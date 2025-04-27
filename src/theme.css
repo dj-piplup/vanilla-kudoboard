@@ -7,7 +7,7 @@
   --splash-color: #EEEEEE;
   --card-roundness: 0.5rem;
   --card-text: #06182b;
-  --card-background: url('../images/repeating-art-paper-background.jpg');
+  --card-background: url('https://sample-cdn.naplings.net/repeating-art-paper-background.jpg');
   --card-username: #06182b77;
   background: #efe2c5;
 }

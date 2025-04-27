@@ -1,6 +1,15 @@
 import { DataStore } from "./data.ts";
 import { renderCard } from "./render.ts";
 import { BoardState } from "./view-state.ts";
+import styleContent from "./style.css?raw";
+import themeContent from "./theme.css?raw";
+
+// We do it this way so that we know for sure that styles are loaded before content is. This will be inlined as raw text on build
+const styleSheet = new CSSStyleSheet();
+styleSheet.replaceSync(styleContent);
+const themeSheet = new CSSStyleSheet();
+themeSheet.replaceSync(themeContent);
+document.adoptedStyleSheets.push(styleSheet, themeSheet);
 
 // static
 const maxColCount = ~~import.meta.env.VITE_SITE_MAX_COL_COUNT;
@@ -112,4 +121,8 @@ splashClose.addEventListener('click', () => {
   // Again, remove the focus unless they actively start keyboard nav. Cards will tab in order correctly
   (document.activeElement as HTMLElement | undefined)?.blur();
 });
+
+// board and header were hidden to make sure it didn't flash content before styles appeared, let them do style based hiding when finished
+board.removeAttribute('hidden');
+document.getElementsByTagName('header')[0].removeAttribute('hidden');
 //#endregion
