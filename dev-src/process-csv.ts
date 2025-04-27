@@ -30,7 +30,7 @@ for (const filename of csvs) {
       return JSON.stringify(obj);
     }
     const outObj = {};
-    for(const key in config.columnsOut){
+    for(const key of config.columnsOut){
       outObj[key] = obj[key];
     }
     return JSON.stringify(outObj);
