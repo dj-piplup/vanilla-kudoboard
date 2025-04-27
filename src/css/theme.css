@@ -1,0 +1,13 @@
+:root {
+  --button-color: #396abf;
+  --button-hover: #2353a5;
+  --button-text: #ffffffe0;
+  --header-color: var(--button-color);
+  --header-text: var(--button-text);
+  --splash-color: #272a2e;
+  --card-roundness: 0.5rem;
+  --card-text: rgba(255, 255, 255, 0.87);
+  --card-background: url('https://sample-cdn.naplings.net/dark-plaid.jpg');
+  --card-username: #fff7;
+  background: #19191a;
+}

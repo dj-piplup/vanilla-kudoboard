@@ -1,15 +1,7 @@
 import { DataStore } from "./data.ts";
 import { renderCard } from "./render.ts";
 import { BoardState } from "./view-state.ts";
-import styleContent from "./style.css?raw";
-import themeContent from "./theme.css?raw";
-
-// We do it this way so that we know for sure that styles are loaded before content is. This will be inlined as raw text on build
-const styleSheet = new CSSStyleSheet();
-styleSheet.replaceSync(styleContent);
-const themeSheet = new CSSStyleSheet();
-themeSheet.replaceSync(themeContent);
-document.adoptedStyleSheets.push(styleSheet, themeSheet);
+import './style-adapter.ts';
 
 // static
 const maxColCount = ~~import.meta.env.VITE_SITE_MAX_COL_COUNT;
