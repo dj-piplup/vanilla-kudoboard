@@ -6,9 +6,9 @@
   --header-text: var(--button-text);
   --card-roundness: 0.5rem;
   --card-text: #06182b;
-  --card-color: #ffffff;
+  --card-color: url('/images/repeating-art-paper-background.jpg');
   --card-username: #06182b77;
-  background: #c9cbd0;
+  background: #efe2c5;
 }
 
 @media (prefers-color-scheme: dark) {
