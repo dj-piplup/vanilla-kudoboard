@@ -1,6 +1,6 @@
 import { readdirSync, readFileSync, writeFileSync } from "fs";
 import { parse } from 'csv-parse/sync';
-import { hasHeaders, columns, transforms } from "./csv-structure.ts";
+import { config } from "./csv-structure.ts";
 
 const csvs = readdirSync("./raw")
   .filter((fname) => fname.endsWith(".csv"))
@@ -9,16 +9,32 @@ for (const filename of csvs) {
   const infile = `./raw/${filename}.csv`;
   const outfile = `./public/${filename}.json`;
   const csvData = readFileSync(infile).toString();
-  const rows = parse(csvData, {columns});
-  if (hasHeaders) {
+  const rows = parse(csvData, {columns: Array.from(config.columnsIn)});
+  if (config.hasHeaders) {
     rows.splice(0, 1);
   }
-  for (const row of rows) {
-    for(const key in transforms){
-      row[key] = transforms[key](row[key]);
+  rows.forEach((row, idx) => {
+    if(config.prefilter && !config.prefilter(row)){
+      rows[idx] = null;
+      return;
     }
-  }
-  const itemStrings = rows.map((obj) => JSON.stringify(obj));
+    for(const key in config.transforms){
+      row[key] = config.transforms[key](row[key]);
+    }
+    if(config.filter && !config.filter(row)){
+      rows[idx] = null;
+    }
+  })
+  const itemStrings = rows.filter(r => r !== null).map((obj) => {
+    if(config.columnsOut === undefined){
+      return JSON.stringify(obj);
+    }
+    const outObj = {};
+    for(const key in config.columnsOut){
+      outObj[key] = obj[key];
+    }
+    return JSON.stringify(outObj);
+  });
   const outData = `[${itemStrings.join(",")}]`;
   writeFileSync(outfile, outData);
 }

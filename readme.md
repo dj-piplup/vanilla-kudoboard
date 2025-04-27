@@ -2,6 +2,8 @@
 
 Static website layout that takes a json of "card" data and lays it out into a masonry wall with text and image posts. By default, cards are lazy-loaded up to one screen-height off screen.
 
+I built this with no framework to keep it very slim. The whole site is 10kb (4kb gzipped) on its own, 32kb (12.5kb gzipped) with a sanitizer included. Art assets not included in size. Typescript and vite are used to keep development smooth and usable despite no frameworks' qol
+
 This is meant to be a template you can fork and use yourself. Simple configuration can be done with .env or theme.css. If you have an alternate data method (say, an api endpoint), data.ts defines a "gulp" function to fetch each "gulp" of data.
 
 ## .env
@@ -24,7 +26,7 @@ This is meant to be a template you can fork and use yourself. Simple configurati
 
 `VITE_SITE_LAZY_FACTOR` is the number of screens ahead to load cards. "2" means to load cards until 2 screens worth of cards exist past your scroll position, including the screen that's visible. If your screen is 1080px tall, then the site will load cards until a block of 2160 px is fully filled with cards, then pause until you scroll
 
-## src/theme.css
+## src/css/theme.css
 
 `--header-color` is the background color of the header
 
@@ -40,17 +42,17 @@ This is meant to be a template you can fork and use yourself. Simple configurati
 
 `--card-text` is the font color for everything else that isn't otherwise specified by the above text colors
 
-`--card-color` is the background color of each card
+`--card-background` is the background color or image of each card
 
 `--card-username` is the color of the username text on the bottom right corner of the card
 
-`background` is for the entire site. This can stay a color or be an image using `URL('<image url>')`. Image may take further styling. Images are default sized so that they cover the entire back of the page with no repeats, so the entire image may not be visible
+`--splash-color` is the color of the "splash screen" card. This must be a color so that it can be shown right away without an image "popping in". If your cards already use a color as background, I recommend just setting this as `var(--card-background)`
 
-Theme variables default in light mode, and get overridden for dark mode (see the @media section in the same file)
+`background` is for the entire site. This can stay a color or be an image using `URL('<image url>')`. Image may take further styling. Images are default sized so that they cover the entire back of the page with no repeats, so the entire image may not be visible
 
 ## src/data.ts
 
-Defines a function for each "gulp" of data, which takes the current data set in, modifies the data in-place, and returns whether or not there's more data to get. The default "gulp" is to grab the full statically defined json in one go, but this can be modified to, for instance, query an api for 20 more cards after \[cards.length\]
+Defines a data store with a function for each "gulp" of data, grabs a new batch of data, stores it, and checks if that was the last one. The default "gulp" is to grab the full statically defined json in one go, but this can be modified to, for instance, query an api for 20 more cards after \[cards.length\]
 
 ## dev-src/...
 
@@ -62,7 +64,7 @@ Called by `pnpm process:data`. Reads in all csv files in the `/raw` folder, thro
 
 ### csv-structure.ts
 
-This defines how to parse the csv. `columns` is the name of each column's json key, not a pretty name. This must match the csv's column counts exactly, even if there are unused columns at the end. `transforms` defines any sort of logic that should be done on a given column. The keys must match a column you defined, and gets called immediately after parsing, but before the final json is written
+This defines a config object declaring how to parse the csv. `columnsIn` is the name of each column's json key, not a pretty name. This must match the csv's column counts exactly, even if there are unused columns at the end. You can define transform functions for each column, a prefilter that eliminates rows before transform, and a filter that eliminates rows after transform
 
 ### markdown.ts
 
