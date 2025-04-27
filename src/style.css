@@ -127,12 +127,13 @@ header {
 
 .card,
 #splash {
-  background: var(--card-color, white);
+  background-color: var(--splash-color, white);
   color: var(--card-text, black);
   border-radius: var(--card-roundness, 0.5rem);
 }
 
 .card {
+  background: var(--card-background, white);
   padding: 0;
   margin: 0;
   min-height: calc(var(--max-col-width) * .6);

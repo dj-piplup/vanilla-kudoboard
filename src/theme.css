@@ -4,9 +4,10 @@
   --button-text: #ffffffe0;
   --header-color: var(--button-color);
   --header-text: var(--button-text);
+  --splash-color: #EEEEEE;
   --card-roundness: 0.5rem;
   --card-text: #06182b;
-  --card-color: url('/images/repeating-art-paper-background.jpg');
+  --card-background: url('/images/repeating-art-paper-background.jpg');
   --card-username: #06182b77;
   background: #efe2c5;
 }
@@ -14,7 +15,8 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --card-text: rgba(255, 255, 255, 0.87);
-    --card-color: #272a2e;
+    --card-background: #272a2e;
+    --splash-color: var(--card-background);
     --card-username: #fff7;
     background: #19191a;
   }
