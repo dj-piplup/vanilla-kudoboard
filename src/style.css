@@ -54,7 +54,7 @@ header {
   width: 100%;
   box-sizing: border-box;
   display: grid;
-  column-gap: 1rem;
+  column-gap: var(--card-gap, 1rem);
   grid-auto-flow: column;
   grid-auto-columns: minmax(0, var(--max-col-width, 500px));
   grid-template-rows: 1fr;
@@ -135,11 +135,19 @@ header {
 .card {
   padding: 0;
   margin: 0;
+  min-height: calc(var(--max-col-width) * .6);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   box-shadow: 0 3px 6px #0003, 0 3px 6px #0004;
 }
 
 .card-text {
-  font-size: 1.1rem;
+  font-size: 1.15rem;
+  width: max-content;
+  max-width: 100%;
+  align-self: center;
+  gap: 1rem;
   & > h1 {
     font-size: 1.3rem;
   }
@@ -155,7 +163,14 @@ header {
   }
 }
 .card-content {
-  padding: 1rem;
+  padding: 1rem 1.5rem 0.5rem;
+  box-sizing: border-box;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
 }
 
 .card-content:not(img ~ .card-content) {
@@ -163,16 +178,17 @@ header {
 }
 
 .card-info {
+  padding-inline: 1rem;
+  padding-bottom: 1rem;
   display: flex;
   justify-content: flex-end;
-  height: 0.9rem;
+  align-self: flex-end;
   & > p {
     margin: 0;
   }
 }
 .card-name {
-  font-size: 0.9rem;
-  color: var(--card-username, #888);
+  font-weight: 300;
 }
 .card-img {
   width: 100%;

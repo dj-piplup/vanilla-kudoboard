@@ -35,10 +35,10 @@ export const renderCard = (data: Card, index: number): HTMLElement => {
       ${img}
       <section class="card-content">
         <div class="card-text">${DOMPurify.sanitize(data.message)}</div>
-        <div class="card-info">
-          <p class="card-name">${data.name}</p>
-        </div>
       </section>
+      <div class="card-info">
+        <p class="card-name">${data.name}</p>
+      </div>
     </article>
   `;
   // use ".innerHTML" to parse the card, but pull it out and discard the wrapper afterward
