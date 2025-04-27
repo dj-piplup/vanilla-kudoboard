@@ -127,7 +127,7 @@ header {
 
 .card,
 #splash {
-  background-color: var(--card-color, white);
+  background: var(--card-color, white);
   color: var(--card-text, black);
   border-radius: var(--card-roundness, 0.5rem);
 }
