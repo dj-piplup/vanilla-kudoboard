@@ -26,6 +26,9 @@ This is meant to be a template you can fork and use yourself. Simple configurati
 
 `VITE_SITE_LAZY_FACTOR` is the number of screens ahead to load cards. "2" means to load cards until 2 screens worth of cards exist past your scroll position, including the screen that's visible. If your screen is 1080px tall, then the site will load cards until a block of 2160 px is fully filled with cards, then pause until you scroll
 
+### .env.dev or .env.production
+This is used to store the meta tag content security policy, allowing them to include http: for dev so localhost works, but not include http: for production. Production content security policy will be ignored if hosting on cloudflare pages, since it will read content security policy from `/public/_headers`
+
 ## src/css/theme.css
 
 `--header-color` is the background color of the header
