@@ -4,10 +4,10 @@
   --button-text: #ffffffe0;
   --header-color: var(--button-color);
   --header-text: var(--button-text);
-  --splash-color: #272a2e;
+  --splash-color: #fff6dd;
   --card-roundness: 0.5rem;
-  --card-text: rgba(255, 255, 255, 0.87);
-  --card-background: url('/images/dark-plaid.jpg');
+  --card-text: #000;
+  --card-background: url('/images/paper.jpg');
   --card-username: #fff7;
-  background: #19191a;
+  background: #e9e1cd;
 }
